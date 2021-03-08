@@ -26,7 +26,7 @@ $(document).ready(function() {
         } else if (11 > hour) {
             $('#toDoInput10').toggleClass('future');
         } else {
-            $('#toDoInput10').toggleClass('present');
+            $('#toDoInput10').toggleClass('past');
         };
 
         if (11 == hour) {
@@ -93,100 +93,9 @@ $(document).ready(function() {
         var text = localStorage.getItem('ToDo');
         text_to_save.textContent = text;
     }
-    saveBtn.addEventListener('click', function(event) {
+    $('#saveBtn').click(function() {
         save();
         retrieve();
     })
 
 });
-/*
-var nine = document.querySelector('#nine');
- if (hour > 09) {
-    nine.classList.add('past');
-    nine.classList.remove('present')
-    nine.classList.remove('future')
- } else (hour < 09)
-    nine.classList.add('future');
-    nine.classList.remove('past');
-    nine.classList.remove('present'); 
-
-var ten = document.querySelector('#ten');
- if (hour > 10) {
-    ten.classList.add('past');
-    ten.classList.remove('present')
-    ten.classList.remove('future')
- } else (hour < 10)
-    ten.classList.add('future');
-    ten.classList.remove('past');
-    ten.classList.remove('present');
-
-var twelve = document.querySelector('#eleven');
- if (hour > 11) {
-    eleven.classList.add('past');
-    eleven.classList.remove('present')
-    twelve.classList.remove('future')
- } else (hour < 11)
-    eleven.classList.add('future');
-    eleven.classList.remove('past')
-    twelve.classList.remove('present'); 
-
-var twelve = document.querySelector('#twelve');
- if (hour > 12) {
-    twelve.classList.add('past');
-    twelve.classList.remove('present')
-    twelve.classList.remove('future')
- } else (hour < 12)
-    twelve.classList.add('future');
-    twelve.classList.remove('past')
-    twelve.classList.remove('present'); 
-
-var thirteen = document.querySelector('#thirteen');
- if (hour > 13) {
-    thirteen.classList.add('past');
-    thirteen.classList.remove('present')
-    thirteen.classList.remove('future')
- } else (hour < 13)
-    thirteen.classList.add('future');
-    thirteen.classList.remove('past')
-    thirteen.classList.remove('present'); 
-
-var fourteen = document.querySelector('#fourteen');
- if (hour > 14) {
-    fourteen.classList.add('past');
-    fourteen.classList.remove('present')
-    fourteen.classList.remove('future')
- } else (hour < 14)
-    fourteen.classList.add('future');
-    fourteen.classList.remove('past')
-    fourteen.classList.remove('present'); 
-
-var fifteen = document.querySelector('#fifteen');
- if (hour > 15) {
-    fifteen.classList.add('past');
-    fifteen.classList.remove('present')
-    fifteen.classList.remove('future')
- } else (hour < 15)
-    fifteen.classList.add('future');
-    fifteen.classList.remove('past')
-    fifteen.classList.remove('present'); 
-
-var sixteen = document.querySelector('#sixteen');
- if (hour > 16) {
-    sixteen.classList.add('past');
-    sixteen.classList.remove('present')
-    sixteen.classList.remove('future')
- } else (hour < 16)
-    sixteen.classList.add('future');
-    sixteen.classList.remove('past')
-    sixteen.classList.remove('present'); 
-
-var seventeen = document.querySelector('#seventeen');
- if (hour > 17) {
-    seventeen.classList.add('past');
-    seventeen.classList.remove('present')
-    seventeen.classList.remove('future')
- } else (hour < 17)
-    seventeen.classList.add('future');
-    seventeen.classList.remove('past')
-    seventeen.classList.remove('present'); 
-*/
