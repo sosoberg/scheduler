@@ -85,7 +85,9 @@ $(document).ready(function() {
             $('#toDoInput17').toggleClass('past');
         }; 
     });
-    var text_to_save = document.querySelector('input').value;
+    
+    //var textToSave = document.querySelector('input').value;
+    /*
     function save(){
         localStorage.setItem('ToDo', text_to_save);    
     };
@@ -93,9 +95,16 @@ $(document).ready(function() {
         var text = localStorage.getItem('ToDo');
         text_to_save.textContent = text;
     }
-    $('#saveBtn').click(function() {
-        save();
-        retrieve();
-    })
+    */
+    
 
+});
+
+$('.saveBtn').click(function() {
+    textToSave = $('input');
+    console.log(textToSave);
+    localStorage.setItem('todo', JSON.stringify(textToSave));
+    var text = localStorage.getItem('todo');
+    var parse = JSON.parse(text);
+    textToSave.textContent = parse;
 });
