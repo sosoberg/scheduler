@@ -85,26 +85,17 @@ $(document).ready(function() {
             $('#toDoInput17').toggleClass('past');
         }; 
     });
-    
-    //var textToSave = document.querySelector('input').value;
-    /*
-    function save(){
-        localStorage.setItem('ToDo', text_to_save);    
-    };
-    function retrieve () {
-        var text = localStorage.getItem('ToDo');
-        text_to_save.textContent = text;
-    }
-    */
+ 
     
 
 });
 
 $('.saveBtn').click(function() {
-    textToSave = $('input');
-    console.log(textToSave);
-    localStorage.setItem('todo', JSON.stringify(textToSave));
+    var textValue = $(this).siblings('.textValue').val().trim();
+    localStorage.setItem('todo', JSON.stringify(textValue));
     var text = localStorage.getItem('todo');
     var parse = JSON.parse(text);
-    textToSave.textContent = parse;
+    textValue.textContent = parse;
 });
+
+// run a for each loop to target the container
